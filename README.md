@@ -442,12 +442,7 @@ This project is licensed under the MIT License.
 ---
 
 ## Author
+K Munirathnam
 
-**Your Name**
-
-* GitHub: https://github.com/your-username
-* LinkedIn: https://linkedin.com/in/your-profile
-
----
-
-⭐ If you found this project useful, consider giving it a star on GitHub.
+* GitHub: https://github.com/KMunirathnam
+* LinkedIn: https://linkedin.com/in/kmunirathnam
