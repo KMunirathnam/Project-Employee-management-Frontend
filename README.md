@@ -1,70 +1,253 @@
-# Getting Started with Create React App
+# Employee Management System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive and user-friendly frontend application built with React.js for managing employee information efficiently. 
+The application provides an intuitive interface for employee administration, including employee registration, updates, search functionality, and dashboard analytics.
+
+## 🚀 Features
+
+### Authentication
+
+* Employee Login Interface
+* Form Validation
+* Secure User Session Handling
+
+### Dashboard
+
+* Employee Overview
+* Department-wise Employee Statistics
+* Quick Navigation to Employee Operations
+
+### Employee Management
+
+* Add New Employee
+* View Employee Records
+* Update Employee Details
+* Delete Employee Information
+* Search Employees by Name or ID
+
+### User Experience
+
+* Responsive Design
+* Interactive UI Components
+* Real-Time API Integration
+* Error Handling and Notifications
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend Technologies
+
+* React.js
+* JavaScript (ES6+)
+* Axios
+* HTML5
+* CSS3
+
+### API Communication
+
+* REST API
+* Axios HTTP Client
+
+---
+
+## 📂 Project Structure
+
+```text
+employee-management-ui/
+│
+├── public/
+│   ├── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── EmployeeList.js
+│   │   ├── AddEmployee.js
+│   │   ├── UpdateEmployee.js
+│   │   ├── Dashboard.js
+│   │   └── Login.js
+│   │
+│   ├── services/
+│   │   └── EmployeeService.js
+│   │
+│   ├── App.js
+│   ├── index.js
+│   └── App.css
+│
+├── package.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+
+Before running the application, ensure the following are installed:
+
+* Node.js (v18 or higher)
+* npm or yarn
+* Backend API running on port 8080
+
+---
+
+## Clone the Repository
+
+```bash
+git clone <repository-url>
+cd employee-management-ui
+```
+
+---
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
+
+---
+
+## Configure Backend API URL
+
+Update the API base URL in the service file:
+
+```javascript
+const BASE_URL = "http://localhost:8080/api/employees";
+```
+
+---
+
+## Start Development Server
+
+```bash
+npm start
+```
+
+The application will start on:
+
+```text
+http://localhost:3000
+```
+
+---
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Run Development Server
 
-### `npm start`
+```bash
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Build for Production
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm run build
+```
 
-### `npm test`
+### Run Tests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm test
+```
 
-### `npm run build`
+### Eject Configuration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run eject
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Application Workflow
 
-### `npm run eject`
+1. User logs into the system.
+2. Dashboard displays employee statistics.
+3. User can:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   * Add Employee
+   * View Employee List
+   * Search Employees
+   * Edit Employee Details
+   * Delete Employee Records
+4. All operations communicate with the Spring Boot backend through REST APIs.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Integration
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The frontend communicates with the backend using Axios.
 
-## Learn More
+Example API call:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```javascript
+import axios from "axios";
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const BASE_URL = "http://localhost:8080/api/employees";
 
-### Code Splitting
+export const getEmployees = () => {
+    return axios.get(BASE_URL);
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Include screenshots of the following pages:
 
-### Making a Progressive Web App
+* Login Page
+* Dashboard
+* Employee List
+* Add Employee Form
+* Edit Employee Form
+* Search Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* JWT Authentication Integration
+* Dark Mode Support
+* Advanced Employee Filtering
+* Pagination
+* Employee Profile Pictures
+* Role-Based Access Control
+* Responsive Mobile Dashboard
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Performance Optimizations
 
-### `npm run build` fails to minify
+* Component Reusability
+* API Request Optimization
+* Lazy Loading
+* Efficient State Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Browser Support
+
+The application supports all modern browsers:
+
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+* Safari
+
+---
+
+## Author
+
+**Your Name**
+
+* GitHub: https://github.com/KMunirathnam
+* LinkedIn: https://linkedin.com/in/kmunirathnam
